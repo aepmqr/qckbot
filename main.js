@@ -5,7 +5,6 @@ const fs = require('fs');
 const disbut = require("discord-buttons");
 disbut(client);
 const memberCounter = require('./counters/member-counter')
-const config = require('./config.json');
 
     client.commands = new Discord.Collection();
     client.events = new Discord.Collection();
@@ -40,4 +39,4 @@ const config = require('./config.json');
     
 })
         
-client.login(config.token);
+client.login(process.env.DISCORD_TOKEN);
